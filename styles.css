@@ -1,0 +1,127 @@
+/*
+Global style rules
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: Roboto, sans-serif;
+  -webkit-box-sizing: border-box;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+
+/*
+Header Section
+*/
+
+
+header {
+  display: flex;
+  text-transform: uppercase;
+}
+
+header img {
+  padding: 3px;
+  width: 120px;
+  height: 120px;
+  color: white;
+}
+
+.header_box {
+  width: 100%;
+  text-align: right;
+  padding-right: 3%;
+  float: right;
+}
+
+#heading_tag {
+  color: orange;
+}
+
+header h1 {
+  font-weight: 200;
+}
+
+
+/*
+Main Section
+*/
+
+
+main {
+  width: 100%
+}
+
+#main_image {
+  max-height: 300px;
+}
+
+main h2 {
+  text-align: center;
+  margin: 3% auto;
+}
+
+.main_figure {
+  text-align: center;
+}
+
+
+/*
+Project Section
+*/
+
+.project_figures {
+  width: 100%;
+  display: inline-block;
+  margin: 0;
+  text-align: center;
+}
+
+
+/*
+Footer Section
+*/
+
+
+footer {
+  width: 100%;
+}
+
+.social_links {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+
+/*
+Media queries for Responsive styling.
+*/
+
+
+@media screen and (max-width: 550px) {
+ .project_figures {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+@media screen and (min-width: 551px) and (max-width:1200px) {
+  .project_figures  {
+    width: calc((100% - 10px)/3)
+  }
+}
+
+@media screen and (min-width: 1201px) {
+  .project_figures  {
+    width: calc((100% - 10px)/3)
+  }
+
+  body {
+    max-width: 1184px;
+    margin: auto;
+  }
+}
