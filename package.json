@@ -1,0 +1,26 @@
+{
+  "name": "myportfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/osogrizz/myPortfolio.git"
+  },
+  "author": "Leo Torres",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/osogrizz/myPortfolio/issues"
+  },
+  "homepage": "https://github.com/osogrizz/myPortfolio#readme",
+  "devDependencies": {
+    "grunt": "^1.0.2",
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-contrib-nodeunit": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-responsive-images": "^1.10.1"
+  }
+}

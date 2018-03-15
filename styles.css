@@ -11,6 +11,9 @@ html, body {
   -webkit-box-sizing: border-box;
   max-width: 100%;
   overflow-x: hidden;
+  margin: 0;
+  background-color: rgb(40, 44, 52);
+  color: white;
 }
 
 
@@ -22,13 +25,14 @@ Header Section
 header {
   display: flex;
   text-transform: uppercase;
+
 }
 
 header img {
   padding: 3px;
   width: 120px;
   height: 120px;
-  color: white;
+  margin-left: 5px;
 }
 
 .header_box {
@@ -53,20 +57,27 @@ Main Section
 
 
 main {
-  width: 100%
+  width: 100%;
+  background-color: rgb(40, 44, 52);
 }
 
 #main_image {
-  max-height: 300px;
+  max-width: 100%;
 }
 
 main h2 {
   text-align: center;
   margin: 3% auto;
+  color: orange;
+  font-weight: 300;
 }
 
 .main_figure {
   text-align: center;
+}
+
+#article {
+  margin: 20px;
 }
 
 
@@ -79,6 +90,16 @@ Project Section
   display: inline-block;
   margin: 0;
   text-align: center;
+  color: green;
+}
+
+.project_figures a {
+  text-decoration: none;
+  color: lime;
+}
+
+#pixel_art_maker {
+  max-height: 300px;
 }
 
 
@@ -89,6 +110,11 @@ Footer Section
 
 footer {
   width: 100%;
+  min-height: 125px;
+  border-top: 1px solid black;
+  margin-top: 80px;
+  margin-left: 0;
+  background-color: rgb(20, 24, 32);
 }
 
 .social_links {
@@ -98,29 +124,42 @@ footer {
 
 
 /*
-Media queries for Responsive styling.
+Media queries for responsive styling.
 */
 
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 767px) {
  .project_figures {
-    width: 100%;
+    max-width: 100%;
     margin-left: 0;
+    margin-bottom: 20px;
   }
 }
 
-@media screen and (min-width: 551px) and (max-width:1200px) {
-  .project_figures  {
-    width: calc((100% - 10px)/3)
+/* @media screen and (min-width:786px) and (max-width: 923px) {
+  .project_figures {
+
+    width: calc((100% - 20px) / 3);
   }
+} */
+
+@media screen and (min-width: 768px) and (max-width:1200px) {
+  .project_figures  {
+    max-height: 200px;
+    width: calc((100% - 10px) / 3);
+  }
+  .project_figures:last-of-type {
+    margin-right: 0;
+  }
+
 }
 
 @media screen and (min-width: 1201px) {
   .project_figures  {
-    width: calc((100% - 10px)/3)
+    width: calc((100% - 10px) / 3);
   }
 
-  body {
+  header, main, #header_hr {
     max-width: 1184px;
     margin: auto;
   }
