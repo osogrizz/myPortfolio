@@ -25,7 +25,6 @@ Header Section
 header {
   display: flex;
   text-transform: uppercase;
-
 }
 
 header img {
@@ -66,6 +65,7 @@ main {
 }
 
 main h2 {
+  text-transform: uppercase;
   text-align: center;
   margin: 3% auto;
   color: orange;
@@ -110,18 +110,29 @@ Footer Section
 
 footer {
   width: 100%;
+  padding: 40px 20px;
   min-height: 125px;
-  border-top: 1px solid black;
   margin-top: 80px;
   margin-left: 0;
   background-color: rgb(20, 24, 32);
 }
 
-.social_links {
-  text-align: center;
-  padding: 40px 20px;
+footer a {
+  text-decoration: none;
+  color: orange;
 }
 
+.social_links {
+  text-align: center;
+  padding: 10px;
+}
+#github-social {
+  max-height: 20px;
+}
+
+#design-evo {
+  font-size: 14px;
+}
 
 /*
 Media queries for responsive styling.
@@ -144,14 +155,15 @@ Media queries for responsive styling.
 } */
 
 @media screen and (min-width: 768px) and (max-width:1200px) {
+  .figure_images {
+    max-width: 250px;
+  }
   .project_figures  {
-    max-height: 200px;
     width: calc((100% - 10px) / 3);
   }
   .project_figures:last-of-type {
     margin-right: 0;
   }
-
 }
 
 @media screen and (min-width: 1201px) {
