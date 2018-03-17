@@ -102,6 +102,20 @@ Featured Work Section
   margin: 0;
   text-align: center;
   /* color: rgb(26,248, 79); */
+
+}
+.project-figures:hover p {
+  color: #C3C32F;
+}
+
+.project-figures img {
+  box-shadow: 0px 0px black;
+  transition-property: box-shadow;
+  transition-duration: .5s;
+  transition-timing-function: linear;
+}
+.project-figures:hover img {
+  box-shadow: 8px 5px 10px rgb(20, 24, 32), 0.2em .4em 2.3em gray;
 }
 
 .project-figures a {
@@ -134,7 +148,7 @@ footer a {
 }
 
 footer a:hover {
-  color: yellow;
+  color: #C3C32F;
 }
 
 .social_links {
