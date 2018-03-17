@@ -89,8 +89,21 @@ main h2 {
   z-index: 10;
   top: 30%;
   font-size: 20px;
+  animation: fadeIn 10s;
 }
 
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+@-webkit-keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1}
+}
+#article {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
 
 /*
 Featured Work Section
