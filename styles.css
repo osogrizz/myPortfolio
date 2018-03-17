@@ -7,7 +7,7 @@ Global style rules
 }
 
 html, body {
-  font-family: Roboto, sans-serif;
+  font-family: 'open sans', sans-serif;
   -webkit-box-sizing: border-box;
   max-width: 100%;
   overflow-x: hidden;
@@ -21,24 +21,28 @@ html, body {
 Header Section
 */
 
+.navbar {
+  width: 100%;
+  border-bottom: 1px solid white;
+}
 
 header {
   display: flex;
   text-transform: uppercase;
 }
 
-header img {
+#logo-img {
   padding: 3px;
   width: 120px;
   height: 120px;
   margin-left: 5px;
 }
 
-.header_box {
+.header-box {
   width: 100%;
   text-align: right;
   padding-right: 3%;
-  float: right;
+  justify-content: flex-end;
 }
 
 #heading_tag {
@@ -60,8 +64,8 @@ main {
   background-color: rgb(40, 44, 52);
 }
 
-#main_image {
-  max-width: 100%;
+#main-image {
+  width: 100%;
 }
 
 main h2 {
@@ -72,30 +76,37 @@ main h2 {
   font-weight: 300;
 }
 
-.main_figure {
+.main-figure {
   text-align: center;
+  position: relative;
+  margin-right: 0;
+  margin-left: 0;
 }
 
 #article {
-  margin: 20px;
+  position: absolute;
+  margin: 0 5%;
+  z-index: 10;
+  top: 30%;
+  font-size: 20px;
 }
 
 
 /*
-Project Section
+Featured Work Section
 */
 
-.project_figures {
+.project-figures {
   width: 100%;
   display: inline-block;
   margin: 0;
   text-align: center;
-  color: green;
+  /* color: rgb(26,248, 79); */
 }
 
-.project_figures a {
+.project-figures a {
   text-decoration: none;
-  color: lime;
+  color: rgb(26, 248, 79);
 }
 
 #pixel_art_maker {
@@ -119,7 +130,11 @@ footer {
 
 footer a {
   text-decoration: none;
-  color: orange;
+  color: rgb(255, 164, 50);
+}
+
+footer a:hover {
+  color: yellow;
 }
 
 .social_links {
@@ -140,39 +155,57 @@ Media queries for responsive styling.
 
 
 @media screen and (max-width: 767px) {
- .project_figures {
+  #article {
+    margin: 0 20%;
+  }
+
+ .project-figures {
     max-width: 100%;
     margin-left: 0;
     margin-bottom: 20px;
   }
 }
 
-/* @media screen and (min-width:786px) and (max-width: 923px) {
-  .project_figures {
-
-    width: calc((100% - 20px) / 3);
-  }
-} */
-
 @media screen and (min-width: 768px) and (max-width:1200px) {
-  .figure_images {
+  #article {
+    margin: 0 28%;
+    font-size: 24px;
+  }
+  .project-figures img {
     max-width: 250px;
   }
-  .project_figures  {
+  .project-figures  {
     width: calc((100% - 10px) / 3);
   }
-  .project_figures:last-of-type {
+  .project-figures:last-of-type {
     margin-right: 0;
   }
 }
 
 @media screen and (min-width: 1201px) {
-  .project_figures  {
+  #article {
+    margin: 0 32%;
+    font-size: 32px;
+  }
+  .project-figures  {
     width: calc((100% - 10px) / 3);
   }
 
-  header, main, #header_hr {
+  main, #header-hr {
     max-width: 1184px;
     margin: auto;
+  }
+
+  .navbar {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    top: 0;
+    border-bottom: none;
+    background-color:rgb(40, 44, 52);
+    z-index: 1000;
+  }
+  .main-figure {
+    margin-top: 140px;
   }
 }
