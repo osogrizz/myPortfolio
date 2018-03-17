@@ -6,7 +6,8 @@ Global style rules
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   font-family: 'open sans', sans-serif;
   -webkit-box-sizing: border-box;
   max-width: 100%;
@@ -45,7 +46,7 @@ header {
   justify-content: flex-end;
 }
 
-#heading_tag {
+#heading-tag {
   color: orange;
 }
 
@@ -68,7 +69,8 @@ main {
   width: 100%;
 }
 
-main h2 {
+.project-title h2 {
+  width: 100%;
   text-transform: uppercase;
   text-align: center;
   margin: 3% auto;
@@ -100,25 +102,29 @@ main h2 {
   0% {opacity: 0;}
   100% {opacity: 1}
 }
+
 #article {
   -webkit-animation-name: fadeIn;
   animation-name: fadeIn;
 }
 
+
 /*
 Featured Work Section
 */
 
+
 .project-figures {
   width: 100%;
-  display: inline-block;
+  display: inline-flex;
+  justify-content: center;
   margin: 0;
   text-align: center;
   /* color: rgb(26,248, 79); */
-
 }
+
 .project-figures:hover p {
-  color: #C3C32F;
+  color: #c3c32F;
 }
 
 .project-figures img {
@@ -136,8 +142,8 @@ Featured Work Section
   color: rgb(26, 248, 79);
 }
 
-#pixel_art_maker {
-  max-height: 300px;
+#pixel-art-maker {
+  /* max-height: 300px; */
 }
 
 
@@ -161,7 +167,7 @@ footer a {
 }
 
 footer a:hover {
-  color: #C3C32F;
+  color: #c3c32F;
 }
 
 .social_links {
@@ -218,7 +224,8 @@ Media queries for responsive styling.
     width: calc((100% - 10px) / 3);
   }
 
-  main, #header-hr {
+  main,
+  #header-hr {
     max-width: 1184px;
     margin: auto;
   }
